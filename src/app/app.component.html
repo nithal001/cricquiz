@@ -6,13 +6,13 @@
       <div class="menuBar">
       	<nav>
         <ul class="menu">
-          <li class="active"><a [routerLink]="['']">Home</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['']" >Home</a></li>
           <li class="dropdown"><a href="#">Pages</a>
             <ul>
-              <li><a href="http://www.htmlpreviews.com/cloud/cricket/vinumo8/index_fixed.html">Home / Fixed</a></li>
+              <li><a href="#">Home / Fixed</a></li>
             </ul>
           </li>
-          <li><a [routerLink]="['about']">About</a></li>
+          <li [routerLinkActive]="['active']"><a [routerLink]="['about']" >About</a></li>
         </ul>
         </nav>
         <ul class="menu m_right">
@@ -20,7 +20,7 @@
         </ul>
       </div>
       <div class="navbar-header">
-        <h1 class="navbar-brand"><a href="http://www.htmlpreviews.com/cloud/cricket/vinumo8/index.html">Cricquiz</a></h1>
+        <h1 class="navbar-brand"><a href="/">Cricquiz</a></h1>
         <a href="#" onClick="javascript.void()" class="submenu">Menus</a> </div>
       <!-- /.navbar-collapse --> 
     </nav>
