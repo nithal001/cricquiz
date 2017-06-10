@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from './shared';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 import '../style/app.scss';
 
@@ -16,8 +19,20 @@ export class AppComponent {
   currentUrl: string;
   
 
-  constructor(private api: ApiService, private _router: Router) {
+  constructor(
+    private api: ApiService, 
+    private _router: Router,
+    private modalService: NgbModal
+    ) {
     this.title = this.api.title;
+  }
+
+  openLoginModal() {
+    this.modalService.open(LoginComponent);
+  }
+
+  openRegisterModal() {
+    this.modalService.open(RegisterComponent);
   }
 
   ngOnInit() {
